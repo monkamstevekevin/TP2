@@ -4,26 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>projets</title>
+    <link rel="stylesheet" href="/css/index_stylingsheet.css" />
     <script
       src="https://kit.fontawesome.com/ffd4a1223b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../CSS PAGES/indeex_stylingsheet.css" />
   </head>
   <body>
-    <nav style="background-color: #191919; position: fixed; width: 100%">
+    <nav>
       <h2 class="logo">Portfo<span>lio</span></h2>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a target="" href="../HTML_PAGES/projects.html">Projects</a></li>
+        <li><a href="#home">Home</a></li>
         <li>
-          <a target="_self" href="../HTML_PAGES/aboutme.html">About Me</a>
+          <a target="_self" href="#about">About Me</a>
         </li>
+        <li><a target="" href="/html/projects.html">Projects</a></li>
       </ul>
-      <a href="#" class="btn">Contact</a>
+      <a href="#contact" class="btn">Contact</a>
     </nav>
-    <div class="projects">
+    <div class="projects" id="project">
       <div class="title">
         <h2>Mes projets</h2>
       </div>
@@ -36,7 +36,9 @@
               Tout site internet doit être unique et doit donner une sensation
               unique,Mais doit fonctionner sur toutes plateformes numériques
               comme les tablettes , les smartphones et les PC ceci sans parler
-              de sa vitesse
+              de sa vitesse. j'ai nottamant travaille sur le site de vente de
+              Précision shoppping et je me suis donner un mois pour coder le
+              site web de vente de la boutique que j'ai reussi.
             </p>
             <p style="text-align: center">
               <a href="#" class="btn">Lire plus</a>
@@ -45,13 +47,17 @@
         </div>
         <div class="card">
           <i class="fa-brands fa-python"></i>
-          <h5>Développement Web</h5>
+          <h5>Développement en lanaguage de python</h5>
           <div class="pra">
             <p>
-              Tout site internet doit être unique et doit donner une sensation
-              unique,Mais doit fonctionner sur toutes plateformes numériques
-              comme les tablettes , les smartphones et les PC ceci sans parler
-              de sa vitesse
+              J’ai travaillé sur un projet en python qu’était basé sur
+              l’intelligence artificielle et le projet consistait à monter une
+              application qui étudie plusieurs photos de chats et après
+              l’application sera capable de reconnaitre une photo de chat dans
+              le monde. Mon équipe et moi avion réussi le projet et cherchons
+              aujourd’hui comment faire qu’une intelligence artificielle qui
+              soit capable de résoudre des problèmes d’électricité d’un certain
+              niveau sans l’intervention d’un technicien.
             </p>
             <p style="text-align: center">
               <a href="#" class="btn">Lire plus</a>
@@ -60,13 +66,13 @@
         </div>
         <div class="card">
           <i class="fa-regular fa-signal"></i>
-          <h5>Développement Web</h5>
+          <h5>Développement en C++</h5>
           <div class="pra">
             <p>
-              Tout site internet doit être unique et doit donner une sensation
-              unique,Mais doit fonctionner sur toutes plateformes numériques
-              comme les tablettes , les smartphones et les PC ceci sans parler
-              de sa vitesse
+              Mon dernier projet que j’ai réalisé était celui d’un guichet
+              automatique en C++. Le projet devait demander à l’utilisateur
+              certain tâches comme effectuer un transfert d’argent, Effectuer un
+              retrait et aussi un dépôt.
             </p>
             <p style="text-align: center">
               <a href="#" class="btn">Lire plus</a>
@@ -86,20 +92,38 @@
         <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
         <a href="#"><i class="fa-brands fa-whatsapp-square"></i></a>
       </div>
-      <div class="form">
-        <form action="">
-          <label for="name">Enter your name</label>
+      <div class="contact-form" id="contact">
+        <form action="" id="contact-form" method="post" action="">
           <input
             type="text"
             name="name"
-            id="name"
-            placeholder="enter your name"
+            class="form-control"
+            placeholder="Entrer votre nom "
+            required
           />
+          <br />
           <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="paseeword"
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Entrer votre courriel"
+            required
+          />
+          <br />
+          <textarea
+            name="message "
+            rows="3"
+            placeholder="Écriver moi un message"
+            class="form-control btn"
+            style="color: #fcfcfc"
+          >
+          Écrivez moi: 
+          </textarea>
+          <br />
+          <input
+            type="submit"
+            class="form-control submit btn"
+            value="SEND MESSAGE"
           />
         </form>
       </div>

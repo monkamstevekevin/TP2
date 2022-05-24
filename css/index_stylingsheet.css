@@ -4,6 +4,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
 }
+:root {
+  --primarycolor: tomato;
+  --secondarycolor: #101010;
+  --textcolor: white;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -17,21 +22,23 @@ html {
 nav {
   position: fixed;
   width: 100%;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   padding-left: 2rem;
   padding-right: 2rem;
+  background-color: #191919;
 }
 .logo {
-  color: white;
+  color: var(--textcolor);
   font-size: 1.5rem;
   letter-spacing: 1px;
   cursor: pointer;
 }
 span {
-  color: tomato;
+  color: var(--primarycolor);
 }
 nav ul li {
   list-style: none;
@@ -39,21 +46,21 @@ nav ul li {
   padding: 0.5rem 0.5rem;
 }
 nav ul li a {
-  color: white;
+  color: var(--textcolor);
   text-decoration: none;
   font-weight: 500px;
   text-transform: capitalize;
 }
 nav ul li a:hover {
-  color: tomato;
+  color: var(--primarycolor);
   transition: 0.4s;
 }
 nav ul li a :active {
   color: rgb(78, 29, 20);
 }
 .btn {
-  background-color: tomato;
-  color: white;
+  background-color: var(--primarycolor);
+  color: var(--textcolor);
   border: 2px solid transparent;
   font-weight: bold;
   padding: 0.5rem 2rem;
@@ -74,17 +81,17 @@ nav .btn {
   transform: translateY(-50%);
 }
 h1 {
-  color: white;
+  color: var(--textcolor);
   margin: 2rem 0 2rem;
   font-size: 3.5rem;
 }
 h3 {
-  color: white;
+  color: var(--textcolor);
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 h4 {
-  color: tomato;
+  color: var(--primarycolor);
   letter-spacing: 0.2rem;
   font-size: 2rem;
 }
@@ -97,7 +104,7 @@ h4 {
   display: inline-block;
   width: 100%;
   padding: 1.4rem 13rem 1.4rem 1.5rem;
-  border: 0.2rem solid tomato;
+  border: 0.2rem solid var(--primarycolor);
   border-radius: 2rem;
   outline: none;
 }
@@ -108,7 +115,7 @@ h4 {
   border: none;
   padding: 0.9rem 3rem;
   border-radius: 2rem;
-  background-color: tomato;
+  background-color: var(--primarycolor);
   box-shadow: 0 0 0.5rem #000, 0 0 0.15rem #858585;
   top: 0.7rem;
   right: 0.6rem;
@@ -124,6 +131,8 @@ h4 {
 }
 .about-text {
   width: 55rem;
+  font-size: 5px;
+  font-weight: 100;
 }
 .main {
   width: 113rem;
@@ -136,13 +145,13 @@ h4 {
   flex-wrap: nowrap;
 }
 .about-text h2 {
-  color: white;
+  color: var(--textcolor);
   font-size: 3.5rem;
   text-transform: capitalize;
   margin-bottom: 2rem;
 }
 .about-text h5 {
-  color: white;
+  color: var(--textcolor);
   letter-spacing: 2px;
   font-size: 22px;
   margin-bottom: 25px;
@@ -157,16 +166,16 @@ h4 {
 }
 button:hover {
   background-color: transparent;
-  border: 2px solid tomato;
+  border: 2px solid var(--primarycolor);
   cursor: pointer;
 }
 .projects {
-  background: #101010;
+  background: var(--secondarycolor);
   width: 100%;
   padding: 5rem 0;
 }
 .title h2 {
-  color: white;
+  color: var(--textcolor);
   font-size: 5rem;
   width: 1100px;
   margin: 3rem auto;
@@ -178,6 +187,18 @@ button:hover {
   align-items: center;
   min-height: 40rem;
   gap: 1rem;
+}
+@media only screen and (max-width: 750px) {
+  .box {
+    flex-direction: column;
+    min-height: 15rem;
+    z-index: -1;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+    width: 20px;
+    margin: 1rem;
+  }
 }
 .card {
   height: 450px;
@@ -199,19 +220,19 @@ button:hover {
 }
 .card i {
   font-size: 3rem;
-  color: tomato;
+  color: var(--primarycolor);
   display: block;
   text-align: center;
   margin: 2.5rem 0;
 }
 h5 {
-  color: white;
+  color: var(--textcolor);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .card:hover {
   transform: scale(1.2);
-  border: 2px tomato solid;
+  border: 2px var(--primarycolor) solid;
   z-index: 1;
 }
 .pra p {
@@ -229,14 +250,14 @@ h5 {
   justify-content: center;
 }
 .contact-me p {
-  color: white;
+  color: var(--textcolor);
   font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 .contact-me .button-two {
-  background-color: tomato;
-  color: white;
+  background-color: var(--primarycolor);
+  color: var(--textcolor);
   border: 2px solid transparent;
   font-weight: bold;
   padding: 0.5rem 2rem;
@@ -247,14 +268,14 @@ h5 {
 .contact-me .button-two:hover {
   transform: scale(1.3);
   background-color: transparent;
-  border: 2px solid tomato;
+  border: 2px solid var(--primarycolor);
   cursor: pointer;
 }
 footer {
   position: relative;
   width: 100%;
   height: 35rem;
-  background: #101010;
+  background: var(--secondarycolor);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,12 +283,12 @@ footer {
 }
 footer p:nth-child(1) {
   font-size: 30px;
-  color: white;
+  color: var(--textcolor);
   margin-bottom: 20px;
   font-weight: 400;
 }
 footer p:nth-child(2) {
-  color: white;
+  color: var(--textcolor);
   font-size: 17px;
   width: 46rem;
   text-align: center;
@@ -282,37 +303,32 @@ footer p:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: tomato;
+  background-color: var(--primarycolor);
   border-radius: 50%;
   margin: 22px 10px;
-  color: white;
+  color: var(--textcolor);
   text-decoration: none;
   font-size: 20px;
 }
 .social a:hover {
   transform: scale(1.2);
   transition: 0.3s;
-  color: #101010;
+  color: var(--secondarycolor);
 }
-.form {
-  height: 5rem;
-  width: auto;
-  background-color: #101010;
-  border-radius: 2px;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
+.form-control {
+  margin: 30px;
+  background: transparent;
+  border: var(--primarycolor);
+  outline: none;
+  border-bottom: 1px solid var(--primarycolor);
+  color: #fcfcfc;
+  font-size: 18px;
 }
-.form h4 {
-  margin-bottom: 1rem;
-}
-.form input {
-  color: #191919;
+form input {
   height: 2rem;
-  width: 300px;
-
-  margin-bottom: 1rem;
-  border-left: none;
-  margin-left: none;
-  margin-top: none;
+}
+form textarea {
+  color: var(--secondarycolor);
+  background-color: var(--primarycolor);
+  content: text me;
 }
