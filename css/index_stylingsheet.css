@@ -15,7 +15,7 @@ html {
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url(/images/background.png);
+  background-image: url(images/background.png);
   background-size: cover;
   background-position: center;
 }
@@ -330,5 +330,4 @@ form input {
 form textarea {
   color: var(--secondarycolor);
   background-color: var(--primarycolor);
-  content: text me;
 }
